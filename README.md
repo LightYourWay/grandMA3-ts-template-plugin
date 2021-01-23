@@ -2,14 +2,12 @@
 A starting point for your grandMA3 plugin project written in TypeScript.
 
 ## build on
-<a style="text-decoration:inherit; color: inherit;" href="https://typescripttolua.github.io" target="_blank">
-<div style="display: flex;">
-    <img src="https://raw.githubusercontent.com/TypeScriptToLua/TypeScriptToLua/master/logo-hq.png?raw=true" alt="TypeScriptToLua" width="64" height="64"/>
-    <h1 style="margin-top: -4px;">
-        <p>&nbsp;<b>Type</b><span style="font-weight:300;">ScriptTo</span><b>Lua</b></p>
+<div align="center">
+    <img src="https://raw.githubusercontent.com/TypeScriptToLua/TypeScriptToLua/master/logo-hq.png?raw=true" alt="TypeScriptToLua" width="256" style="text-decoration:inherit; color: inherit; cursor: pointer;" href="https://typescripttolua.github.io" target="_blank"/>
+    <h1 style="text-decoration:inherit; color: inherit; cursor: pointer;" href="https://typescripttolua.github.io" target="_blank">
+        <p>TypeScriptToLua</p>
     </h1>
 </div>
-</a>
 
 ### as well as:
 
