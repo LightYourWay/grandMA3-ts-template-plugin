@@ -1,0 +1,36 @@
+{
+  "name": "grandma3-ts-template-plugin",
+  "version": "0.0.1",
+  "description": "A starting point for your grandMA3 plugin project written in TypeScript.",
+  "scripts": {
+    "build": "tstl && node build.js",
+    "lint:check": "prettier --check **/*.{ts,d.ts}",
+    "lint:fix": "prettier --write **/*.{ts,d.ts}"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "proseWrap": "never",
+    "singleQuote": true,
+    "trailingComma": "all",
+    "useTabs": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LightYourWay/grandMA3-tstl-template-plugin.git"
+  },
+  "author": "Lukas Runge",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LightYourWay/grandMA3-tstl-template-plugin/issues"
+  },
+  "homepage": "https://github.com/LightYourWay/grandMA3-tstl-template-plugin#readme",
+  "devDependencies": {
+    "grandma3-tstl-plugin": "^0.2.2",
+    "grandma3-types": "^0.3.2",
+    "lua-types": "^2.8.0",
+    "prettier": "^2.2.1",
+    "ts-node": "^9.1.1",
+    "typescript-to-lua": "^0.37.1"
+  },
+  "dependencies": {}
+}
