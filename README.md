@@ -3,10 +3,12 @@ A starting point for your grandMA3 plugin project written in TypeScript.
 
 ## build on
 <a style="text-decoration:inherit; color: inherit;" href="https://typescripttolua.github.io" target="_blank">
-	<h1 class="hero__title title_1uZi">
-		<img style="vertical-align:middle;position: relative; top:-2px;" src="https://raw.githubusercontent.com/TypeScriptToLua/TypeScriptToLua/master/logo-hq.png?raw=true" alt="TypeScriptToLua" width="64" />
-		<b>Type</b><wbr>Script<wbr>To<b>Lua</b>
-	</h1>
+<div style="display: flex;">
+    <img src="https://raw.githubusercontent.com/TypeScriptToLua/TypeScriptToLua/master/logo-hq.png?raw=true" alt="TypeScriptToLua" width="64" height="64"/>
+    <h1 style="margin-top: -4px;">
+        <p>&nbsp;<b>Type</b><span style="font-weight:300;">ScriptTo</span><b>Lua</b></p>
+    </h1>
+</div>
 </a>
 
 ### as well as:
