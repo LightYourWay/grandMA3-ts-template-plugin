@@ -1,6 +1,6 @@
 {
   "name": "grandma3-ts-template-plugin",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A starting point for your grandMA3 plugin project written in TypeScript.",
   "scripts": {
     "build": "tstl && node build.js",
