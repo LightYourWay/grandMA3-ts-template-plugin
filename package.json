@@ -27,10 +27,9 @@
   "devDependencies": {
     "grandma3-tstl-plugin": "^0.2.2",
     "grandma3-types": "^0.3.2",
-    "lua-types": "^2.8.0",
+    "lua-types": "^2.11.0",
     "prettier": "^2.2.1",
-    "ts-node": "^9.1.1",
-    "typescript-to-lua": "^0.37.1"
-  },
-  "dependencies": {}
+    "ts-node": "^10.7.0",
+    "typescript-to-lua": "^1.4.3"
+  }
 }
