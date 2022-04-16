@@ -26,7 +26,7 @@
   "homepage": "https://github.com/LightYourWay/grandMA3-tstl-template-plugin#readme",
   "devDependencies": {
     "grandma3-tstl-plugin": "^0.2.2",
-    "grandma3-types": "^0.3.2",
+    "grandma3-types": "^0.5.0",
     "lua-types": "^2.11.0",
     "prettier": "^2.2.1",
     "ts-node": "^10.7.0",
