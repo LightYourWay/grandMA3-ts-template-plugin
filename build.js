@@ -1,8 +1,10 @@
 const { once } = require('events');
 const { createInterface } = require('readline');
+const path = require('path');
+const pjson = require('./package.json');
 const fs = require('fs');
 
-var filename = `dist/${process.env.npm_package_name}.lua`;
+var filename = `dist/plugin.lua`;
 fs.readFile(filename, 'utf8', function (err, data) {
 	if (err) {
 		return console.log(err);
@@ -30,11 +32,13 @@ end\n`,
 	(async function processLineByLine() {
 		try {
 			const rl = createInterface({
-				input: fs.createReadStream('LICENSE'),
+				input: fs.createReadStream('src/LICENSE'),
 				crlfDelay: Infinity,
 			});
 
 			rl.on('line', (line) => {
+				line = line.replace("[year]", new Date().getFullYear());
+				line = line.replace("[fullname]", pjson.author);
 				license.push(`-- ${line}`);
 			});
 
@@ -46,14 +50,14 @@ end\n`,
 			fs.writeFile(filename, result, 'utf8', function (err) {
 				if (err) return console.log(err);
 			});
-			fs.rename(`dist/${process.env.npm_package_name}.lua`, `dist/${process.env.npm_package_name}_v${process.env.npm_package_version}.lua`, function (err) {
+			fs.rename(`dist/plugin.lua`, `dist/${process.env.npm_package_name}.lua`, function (err) {
 				if (err) return console.log(err);
 			});
 
-			fs.writeFile(`dist/${process.env.npm_package_name}_v${process.env.npm_package_version}.xml`, `<?xml version="1.0" encoding="UTF-8"?>
-<GMA3 DataVersion="1.4.0.2">
-    <Plugin Name="${process.env.npm_package_name}" Version="${process.env.npm_package_version}">
-        <ComponentLua Name="${process.env.npm_package_name}" FileName="${process.env.npm_package_name}_v${process.env.npm_package_version}.lua" ContentType="Automatic">
+			fs.writeFile(`dist/${process.env.npm_package_name}.xml`, `<?xml version="1.0" encoding="UTF-8"?>
+<GMA3 DataVersion="${pjson.gma_version}">
+    <Plugin Name="${process.env.npm_package_name}" Version="${process.env.npm_package_version}" Author="${pjson.author}" Path="/${path.basename(process.cwd())}/dist">
+        <ComponentLua Name="${process.env.npm_package_name}" FileName="${process.env.npm_package_name}.lua">
         </ComponentLua>
     </Plugin>
 </GMA3>

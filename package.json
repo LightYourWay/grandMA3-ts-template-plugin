@@ -2,8 +2,20 @@
   "name": "grandma3-ts-template-plugin",
   "version": "0.1.0",
   "description": "A starting point for your grandMA3 plugin project written in TypeScript.",
+  "author": "Lukas Runge Veranstaltungstechnik",
+  "license": "MIT",
+  "gma_version": "1.6.3.7",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LightYourWay/grandMA3-tstl-template-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LightYourWay/grandMA3-tstl-template-plugin/issues"
+  },
+  "homepage": "https://github.com/LightYourWay/grandMA3-tstl-template-plugin#readme",
   "scripts": {
     "build": "tstl && node build.js",
+    "watch": "nodemon --watch src --watch package.json --watch build.js --ext ts --exec \"npm run build\"",
     "lint:check": "prettier --check **/*.{ts,d.ts}",
     "lint:fix": "prettier --write **/*.{ts,d.ts}"
   },
@@ -14,20 +26,11 @@
     "trailingComma": "all",
     "useTabs": true
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LightYourWay/grandMA3-tstl-template-plugin.git"
-  },
-  "author": "Lukas Runge",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/LightYourWay/grandMA3-tstl-template-plugin/issues"
-  },
-  "homepage": "https://github.com/LightYourWay/grandMA3-tstl-template-plugin#readme",
   "devDependencies": {
     "grandma3-tstl-plugin": "^0.2.2",
     "grandma3-types": "^0.5.0",
     "lua-types": "^2.11.0",
+    "nodemon": "^2.0.15",
     "prettier": "^2.6.2",
     "ts-node": "^10.7.0",
     "typescript-to-lua": "^1.4.3"
