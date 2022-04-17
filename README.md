@@ -25,7 +25,7 @@ To optimize the development process it's recommended to download the plugin temp
   - **Windows:** `C:/ProgramData/MALightingTechnology/gma3_library/datapools/plugins/my-new-plugin`
   - **Mac:** `HD/users/[username]/MALightingTechnology/gma3_library/datapools/plugins/my-new-plugin`
 
-This can either be done thru downloading the repos as [`*.zip`](https://github.com/LightYourWay/grandMA3-ts-template-plugin/archive/refs/heads/master.zip) and unpacking at said path or directly cloing the repository via cmdline.
+This can either be done thru downloading the repos as [`*.zip`](https://github.com/LightYourWay/grandMA3-ts-template-plugin/archive/refs/heads/master.zip) and unpacking at said path or directly cloning the repository via cmdline.
 
 ```bash
 git clone https://github.com/LightYourWay/grandMA3-ts-template-plugin.git <path>
