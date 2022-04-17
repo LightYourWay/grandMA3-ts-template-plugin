@@ -9,7 +9,7 @@
 		"strict": true
 	},
 	"tstl": {
-		"luaTarget": "5.3",
+		"luaTarget": "5.4",
 		"noHeader": true,
 		"luaBundle": "dist/grandma3-ts-template-plugin.lua",
 		"luaBundleEntry": "src/grandma3-ts-template-plugin.ts",
