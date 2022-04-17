@@ -1,8 +1,13 @@
+let pluginName     = select(1, ...$vararg)[0];
+let componentName  = select(2, ...$vararg)[0]; 
+let signalTable    = select(3, ...$vararg)[0];
+let my_handle      = select(4, ...$vararg)[0];
+
 // ****************************************************************
 // plugin load entry point
 // ****************************************************************
 function Load() {
-	Echo(`grandma3-tstl-template-plugin has been loaded...`);
+	Echo(`${pluginName} has been loaded...`);
 }
 
 Load();
@@ -11,21 +16,21 @@ Load();
 // plugin main entry point
 // ****************************************************************
 function Main(display_handle: number, argument: any) {
-	Printf(`grandma3-tstl-template-plugin has been called...`);
+	Printf(`${pluginName} has been called...`);
 }
 
 // ****************************************************************
 // plugin exit cleanup entry point
 // ****************************************************************
 function Cleanup() {
-	Echo(`grandma3-tstl-template-plugin has been cleaning up...`);
+	Echo(`${pluginName} has been cleaning up...`);
 }
 
 // ****************************************************************
 // plugin execute entry point
 // ****************************************************************
 function Execute(Type: string, ...args: any[]) {
-	Echo(`grandma3-tstl-template-plugin has been executed...`);
+	Echo(`${pluginName} has been executed...`);
 }
 
 export = [Main, Cleanup, Execute];
