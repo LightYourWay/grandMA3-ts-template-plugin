@@ -54,9 +54,20 @@ end\n`,
 				if (err) return console.log(err);
 			});
 
+			const execPath = path.parse(process.cwd());
+			const buildPath = path.join(execPath.dir, execPath.base, 'dist').replace(/\\/g, '/');
+
+			var xmlPath = `/${execPath.base}/dist`
+
+			const isInMAFolderStructure = buildPath.includes('MALightingTechnology');
+			const isInPluginsFolder = buildPath.includes('plugins') || buildPath.includes('lib_plugins');
+			if (isInMAFolderStructure && isInPluginsFolder) {
+				xmlPath = buildPath.replace(/.+?(?:\/plugins|\/lib_plugins)(.+)/g, '$1');
+			}
+
 			fs.writeFile(`dist/${process.env.npm_package_name}.xml`, `<?xml version="1.0" encoding="UTF-8"?>
 <GMA3 DataVersion="${pjson.gma_version}">
-    <Plugin Name="${process.env.npm_package_name}" Version="${process.env.npm_package_version}" Author="${pjson.author}" Path="/${path.basename(process.cwd())}/dist">
+    <Plugin Name="${process.env.npm_package_name}" Version="${process.env.npm_package_version}" Author="${pjson.author}" Path="${xmlPath}">
         <ComponentLua Name="${process.env.npm_package_name}" FileName="${process.env.npm_package_name}.lua">
         </ComponentLua>
     </Plugin>
