@@ -1,7 +1,7 @@
-let pluginName     = select(1, ...$vararg)[0];
-let componentName  = select(2, ...$vararg)[0]; 
-let signalTable    = select(3, ...$vararg)[0];
-let my_handle      = select(4, ...$vararg)[0];
+let pluginName = select(1, ...$vararg)[0];
+let componentName = select(2, ...$vararg)[0];
+let signalTable = select(3, ...$vararg)[0];
+let my_handle = select(4, ...$vararg)[0];
 
 // ****************************************************************
 // plugin load entry point
