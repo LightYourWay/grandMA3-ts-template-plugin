@@ -4,7 +4,7 @@
   "description": "A starting point for your grandMA3 plugin project written in TypeScript.",
   "author": "Lukas Runge Veranstaltungstechnik",
   "license": "MIT",
-  "gma_version": "1.6.3.7",
+  "gma_version": "1.8.1.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LightYourWay/grandMA3-tstl-template-plugin.git"
