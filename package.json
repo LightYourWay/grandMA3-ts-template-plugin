@@ -17,7 +17,10 @@
     "build": "tstl && node build.js",
     "watch": "nodemon --watch src --watch package.json --watch build.js --ext ts --exec \"npm run build\"",
     "lint:check": "prettier --check **/*.{ts,d.ts}",
-    "lint:fix": "prettier --write **/*.{ts,d.ts}"
+    "lint:fix": "prettier --write **/*.{ts,d.ts}",
+    "link:types": "npm link ../grandma3-types",
+    "link:plugin": "npm link ../grandma3-tstl-plugin",
+    "link:all": "npm link ../grandma3-types ../grandma3-tstl-plugin"
   },
   "prettier": {
     "printWidth": 100,
