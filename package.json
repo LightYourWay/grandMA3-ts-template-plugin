@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "grandma3-tstl-plugin": "^0.3.1",
-    "grandma3-types": "^0.5.0",
+    "grandma3-types": "^0.6.1",
     "lua-types": "^2.13.0",
     "nodemon": "^2.0.20",
     "prettier": "^2.7.1",
