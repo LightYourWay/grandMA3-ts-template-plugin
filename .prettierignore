@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Release artifacts
+release/
+
+# Lockfiles
+package-lock.json
+
+# Lua output
+*.lua
+
+# macOS
+.DS_Store
