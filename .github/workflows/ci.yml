@@ -24,5 +24,8 @@ jobs:
       - name: Check formatting
         run: npm run lint:check
 
-      - name: Build
+      - name: Build plugin
         run: npm run build
+
+      - name: Build docs
+        run: npm run docs:build

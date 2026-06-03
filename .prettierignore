@@ -4,6 +4,10 @@ node_modules/
 # Build output
 dist/
 
+# VitePress build output and cache
+docs/.vitepress/cache/
+docs/.vitepress/dist/
+
 # Release artifacts
 release/
 

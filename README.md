@@ -1,4 +1,4 @@
-# grandMA3 TypeScript Template Plugin
+# grandMA3 Plugin Starter
 
 A starting point for your grandMA3 plugin project written in TypeScript.
 
@@ -25,17 +25,17 @@ A starting point for your grandMA3 plugin project written in TypeScript.
 - [**Node.js®**](https://nodejs.org/) LTS
 - [**Visual Studio Code**](https://code.visualstudio.com/) or any other IDE / Text Editor
 
-## download template
+## download starter
 
-To optimize the development process it's recommended to download the plugin template to following `<path>` for development:
+To optimize the development process it's recommended to download the plugin starter to following `<path>` for development:
 
 - **Windows:** `C:/ProgramData/MALightingTechnology/gma3_library/datapools/plugins/my-new-plugin`
 - **Mac:** `HD/users/[username]/MALightingTechnology/gma3_library/datapools/plugins/my-new-plugin`
 
-This can either be done thru downloading the repos as [`*.zip`](https://github.com/LightYourWay/grandMA3-ts-template-plugin/archive/refs/heads/master.zip) and unpacking at said path or directly cloning the repository via cmdline.
+This can either be done thru downloading the repos as [`*.zip`](https://github.com/LightYourWay/grandMA3-plugin-starter/archive/refs/heads/main.zip) and unpacking at said path or directly cloning the repository via cmdline.
 
 ```bash
-git clone https://github.com/LightYourWay/grandMA3-ts-template-plugin.git <path>
+git clone https://github.com/LightYourWay/grandMA3-plugin-starter.git <path>
 ```
 
 ## install dependencies
@@ -78,7 +78,7 @@ Add your features to the plugin entrypoint at `plugin.ts`
 // plugin load entry point
 // ****************************************************************
 function Load() {
-	Echo(`grandma3-tstl-template-plugin has been loaded...`);
+	Echo(`grandma3-plugin-starter has been loaded...`);
 }
 
 Load();
@@ -87,7 +87,7 @@ Load();
 // plugin main entry point
 // ****************************************************************
 function Main(display_handle: number, argument: any) {
-	Printf(`grandma3-tstl-template-plugin has been called...`);
+	Printf(`grandma3-plugin-starter has been called...`);
 	Printf(`MY NEW FEATURE!!!`);
 }
 
@@ -95,14 +95,14 @@ function Main(display_handle: number, argument: any) {
 // plugin exit cleanup entry point
 // ****************************************************************
 function Cleanup() {
-	Echo(`grandma3-tstl-template-plugin has been cleaning up...`);
+	Echo(`grandma3-plugin-starter has been cleaning up...`);
 }
 
 // ****************************************************************
 // plugin execute entry point
 // ****************************************************************
 function Execute(Type: string, ...args: any[]) {
-	Echo(`grandma3-tstl-template-plugin has been executed...`);
+	Echo(`grandma3-plugin-starter has been executed...`);
 }
 
 export = [Main, Cleanup, Execute];

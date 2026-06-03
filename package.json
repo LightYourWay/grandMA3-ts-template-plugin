@@ -1,5 +1,5 @@
 {
-	"name": "grandma3-ts-template-plugin",
+	"name": "grandma3-plugin-starter",
 	"version": "0.3.0",
 	"description": "A starting point for your grandMA3 plugin project written in TypeScript.",
 	"author": "Lukas Runge Veranstaltungstechnik",
@@ -7,16 +7,19 @@
 	"gma_version": "2.4.2.2",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/LightYourWay/grandMA3-tstl-template-plugin.git"
+		"url": "git+https://github.com/LightYourWay/grandMA3-plugin-starter.git"
 	},
 	"bugs": {
-		"url": "https://github.com/LightYourWay/grandMA3-tstl-template-plugin/issues"
+		"url": "https://github.com/LightYourWay/grandMA3-plugin-starter/issues"
 	},
-	"homepage": "https://github.com/LightYourWay/grandMA3-tstl-template-plugin#readme",
+	"homepage": "https://github.com/LightYourWay/grandMA3-plugin-starter#readme",
 	"scripts": {
 		"build": "tstl",
 		"dev": "tstl --watch",
 		"package": "node scripts/package.mjs",
+		"docs:dev": "vitepress dev docs",
+		"docs:build": "vitepress build docs",
+		"docs:preview": "vitepress preview docs",
 		"lint:check": "prettier --check .",
 		"lint:fix": "prettier --write .",
 		"link:types": "npm link ../grandma3-types",
@@ -24,6 +27,8 @@
 		"link:all": "npm link ../grandma3-types ../grandma3-tstl-plugin"
 	},
 	"devDependencies": {
+		"@shikijs/vitepress-twoslash": "^3.23.0",
+		"@types/node": "^24.12.4",
 		"fflate": "^0.8.3",
 		"grandma3-toolkit": "^0.2.1",
 		"grandma3-tsserver-plugin": "^0.3.0",
@@ -32,6 +37,7 @@
 		"lua-types": "^2.14.1",
 		"prettier": "^3.8.3",
 		"typescript": "^6.0.2",
-		"typescript-to-lua": "^1.36.0"
+		"typescript-to-lua": "^1.36.0",
+		"vitepress": "^2.0.0-alpha.17"
 	}
 }
