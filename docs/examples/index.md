@@ -12,4 +12,4 @@ Short, self-contained snippets that show common MA3 plugin patterns. Each one is
 - **MA3 query syntax** in strings (e.g. `'Sequence "MySeq" Cue 2'`, `'Preset 5.3'`) — the same syntax you'd type at the command line. Quote names with spaces.
 - **`Cmd(string)`** for one-off operations that don't have a typed method, falling back to the canonical command line.
 
-Add your own examples by dropping a new Markdown file in `docs/examples/` and adding it to the sidebar in `docs/.vitepress/config.mts`.
+Add your own examples by dropping a new Markdown file in `docs/examples/`.
