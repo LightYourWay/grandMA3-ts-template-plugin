@@ -119,10 +119,10 @@ There are **four entrypoints** to hook functions into:
 
 ### development
 
-To build your plugin for development and watch for file changes to automatically recompile run:
+To build your plugin and watch for file changes to automatically recompile run:
 
 ```bash
-npm run watch
+npm run dev
 ```
 
 ### production
@@ -133,8 +133,22 @@ To build your plugin for production run:
 npm run build
 ```
 
+This emits `dist/<plugin-name>.lua` and the matching `dist/<plugin-name>.xml` (both named from `package.json`'s `name`).
+
 ## import into grandMA3
 
 As long as the plugin development folder is located in the said `<path>` of grandMA3 the plugin can directly be imported like so: [![How to import the plugin](https://i.imgur.com/1zJvKD5.png)](https://i.imgur.com/1zJvKD5.png)
 
 ### :tada: you successfully loaded a plugin written in TypeScript into the grandMA3 :sparkles:
+
+## package for release
+
+To bundle the built plugin into a release zip locally:
+
+```bash
+npm run package
+```
+
+This writes `release/<plugin-name>_v<version>.zip` containing the Lua bundle, XML, `README.md`, and `LICENSE`, all rooted under a `<plugin-name>/` folder so the archive extracts directly into MA3's plugins directory.
+
+A GitHub Actions workflow (`.github/workflows/publish.yml`) runs on every `v*` tag push: it builds, packages, and creates a draft GitHub Release with the zip attached.
